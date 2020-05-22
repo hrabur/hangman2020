@@ -7,7 +7,7 @@ public class Game {
 	private String word;
 	private String puzzle;
 	private int triesLeft;
-	private Set<Character> letersLeft;
+	private Set<Character> lettersLeft;
 
 	public String getGameId() {
 		return gameId;
@@ -41,12 +41,11 @@ public class Game {
 		this.triesLeft = triesLeft;
 	}
 
-	public Set<Character> getLetersLeft() {
-		return letersLeft;
+	public Set<Character> getLettersLeft() {
+		return lettersLeft;
 	}
 
-	public void setLetersLeft(Set<Character> letersLeft) {
-		this.letersLeft = letersLeft;
+	public void setLettersLeft(Set<Character> lettersLeft) {
+		this.lettersLeft = lettersLeft;
 	}
-
 }

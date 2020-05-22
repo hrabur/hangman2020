@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Hangman 2020</title>
+</head>
+<body>
+	<h2>
+		Guess the word. You have <span th:text="${game.triesLeft}">5</span>
+		tries left
+	</h2>
+	<h1 th:text="${game.puzzle}">Word</h1>
+	<form method="post"
+		th:action="@{/games/{gameId}/tries(gameId = ${game.gameId})}"
+		action="/games/123/tries">
+		<span th:each="letter : ${game.lettersLeft}">
+			<button type="submit" th:value="${letter}" value="a">
+				<span th:text="${letter}">a</span>
+			</button>
+		</span>
+	</form>
+</body>
+</html>
