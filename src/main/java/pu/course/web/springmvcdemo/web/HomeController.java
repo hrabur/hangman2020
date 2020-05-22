@@ -16,7 +16,7 @@ public class HomeController {
 	
 
 	@RequestMapping("/")
-	public ModelAndView sayHello(@CookieValue Optional<Integer> age, Errors errors) {
+	public ModelAndView sayHello(@CookieValue Optional<String> name) {
 		
 		ModelAndView mav = new ModelAndView("index.html");
 		mav.addObject("name", name.orElse("Guest"));
